@@ -29,7 +29,7 @@ def get_csv_file_count():
     return number_of_csv_file
 
 
-def get_excel_file_count(parameter_list):
+def get_excel_file_count():
     """
     Get the total number of CSV file present in the current directory
     """
@@ -73,7 +73,7 @@ def combine_csv(output_csv_name):
     combined_csv_data.to_csv(output_csv_name)
 
 
-def combine_csv(output_json_name):
+def combine_json(output_json_name):
 
     """
     Combine all the json file by reading
@@ -85,7 +85,7 @@ def combine_csv(output_json_name):
     combined_json_data = []
     for f in glob.glob("*.json"):
         with open(f, "rb") as input_file:
-            combined_json_data.append(json.load(input_files))
+            combined_json_data.append(json.load(input_file))
 
     with open(output_json_name+".json", "wb") as output_file:
         json.dump(combined_json_data, output_file)

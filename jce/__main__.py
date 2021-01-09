@@ -12,7 +12,9 @@ def main(file_type, output_name):
     Conversion
     """
     if file_type.lower() == 'json':
-        print("Your json function")
+        count = get_json_file_count()
+        print(count)
+        combine_csv(output_name)
     elif file_type.lower() == 'csv':
         count = get_csv_file_count()
         print(count)
