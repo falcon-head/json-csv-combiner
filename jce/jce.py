@@ -70,7 +70,7 @@ def combine_csv(output_csv_name):
         df = pd.read_csv(f)
         all_data = all_data.append(df, ignore_index=True)
 
-    combined_csv_data.to_csv(output_csv_name)
+    combined_csv_data.to_csv(output_csv_name, index=False)
 
 
 def combine_json(output_json_name):
@@ -87,5 +87,5 @@ def combine_json(output_json_name):
         with open(f, "rb") as input_file:
             combined_json_data.append(json.load(input_file))
 
-    with open(output_json_name+".json", "wb") as output_file:
+    with open(output_json_name, "wb") as output_file:
         json.dump(combined_json_data, output_file)

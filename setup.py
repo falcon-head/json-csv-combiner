@@ -6,7 +6,7 @@ with open('README.md', 'r', encoding='utf-8') as file:
 setup(
     name                ='json-csv-combiner',
     packages            =find_packages(include=['jce']),
-    version             ='0.1.0',
+    version             ='0.1.2',
     description         ='Combine multiple JSON/CSV/EXCEL into single file',
     long_description    = long_description,
     long_description_content_type='text/markdown',
